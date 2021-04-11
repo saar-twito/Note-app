@@ -1,9 +1,9 @@
 import React from "react";
 import TableHeader from "./NoteTable/tableHeader";
 import TableBody from "./NoteTable/tableBody";
-import Sort from "./sort";
+import Sort from "./Sort";
 
-const noteList = ({
+const NoteList = ({
   sortedNotes,
   statuses,
   filters,
@@ -26,4 +26,4 @@ const noteList = ({
   );
 };
 
-export default React.memo(noteList);
+export default React.memo(NoteList);

@@ -2,7 +2,7 @@
 import React from "react";
 import Joi from "joi-browser";
 import NoteForm from "./noteForm";
-import NoteList from "./noteList";
+import NoteList from "./NoteList";
 import { getStatuses } from "../../service/status";
 import http from "../../service/note";
 import _ from "lodash";
@@ -15,7 +15,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 // Icons
 import { AiOutlineSend } from "react-icons/ai";
-import classes from "../../Style/index.module.css";
+import "../Forms/style.css";
 
 class NoteMain extends NoteForm {
   state = {
@@ -140,8 +140,8 @@ class NoteMain extends NoteForm {
         <div className="container mt-5">
           <div className="row">
             <div className="col-sm-12 col-md-6">
-              <form className={classes.Form} onSubmit={this.handleSubmit}>
-                <h1 className={classes.CrateNoteHeader}>Crate a note</h1>
+              <form className="form" onSubmit={this.handleSubmit}>
+                <h1>Crate a note</h1>
                 {this.renderSelect(
                   "status",
                   "Choose a status from this menu",

@@ -3,7 +3,7 @@ import { IconContext } from "react-icons";
 import { MdDelete } from "react-icons/md";
 import { AiFillEdit } from "react-icons/ai";
 
-const tableBody = ({ notes, onDelete, onUpdate }) => (
+const TableBody = ({ notes, onDelete, onUpdate }) => (
   <IconContext.Provider value={{ size: "1.5rem" }}>
     <tbody>
       {notes.map((note) => (
@@ -37,4 +37,4 @@ const tableBody = ({ notes, onDelete, onUpdate }) => (
   </IconContext.Provider>
 );
 
-export default tableBody;
+export default TableBody;

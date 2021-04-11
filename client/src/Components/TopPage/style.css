@@ -1,9 +1,9 @@
-.Top {
+.top {
   position: relative;
   text-align: center;
 }
 
-.Image {
+.image {
   background-image: url("../../img/Notes.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -12,12 +12,10 @@
   filter: brightness(50%);
 }
 
-.Header {
+.header {
   text-align: left;
   left: 5rem;
   color: snow;
-  font-size: 5rem;
-  font-family: "Merriweather", serif;
   letter-spacing: 2px;
   opacity: 0.9;
   position: absolute;
@@ -25,11 +23,11 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  .Image {
+  .image {
     background-image: url("../../img/small.jpg");
     background-position: top center;
   }
-  .Header {
+  .header {
     font-size: 2.5rem;
     letter-spacing: 3px;
     top: 13rem;
@@ -38,7 +36,7 @@
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 601px) {
-  .Header {
+  .header {
     font-size: 3.7rem;
     margin-top: 9rem;
     top: 19rem;
@@ -47,7 +45,7 @@
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  .Header {
+  .header {
     font-size: 4.3rem;
     margin-top: 9.5rem;
   }
@@ -55,7 +53,7 @@
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  .Header {
+  .header {
     font-size: 4.6rem;
     margin-top: 8.5rem;
   }
@@ -63,7 +61,7 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  .Header {
+  .header {
     font-size: 4.9rem;
     margin-top: 8rem;
   }

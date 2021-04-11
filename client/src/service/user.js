@@ -9,11 +9,11 @@ const getJwt = () => localStorage.getItem(http.tokenKey);
 http.includeTokenInRequests(getJwt());
 
 // * Register
-const register = (user) => http.post(`/register`, user)
+const register = (user) => http.post(`auth/register`, user)
 
-// * Sign in
-const signIn = async (user) => {
-    const { data: jwt } = await http.post(`/signIn`, user)
+// * login
+const login = async (user) => {
+    const { data: jwt } = await http.post(`auth/login`, user)
     localStorage.setItem(http.tokenKey, jwt);
 }
 
@@ -36,7 +36,7 @@ const getCurrentUser = () => {
 
 export default {
     register,
-    signIn,
+    login,
     logout,
     setTokenInLocalStorage,
     getJwt,

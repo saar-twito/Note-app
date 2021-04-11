@@ -1,6 +1,6 @@
 import React from "react";
 import Form from "../Common/form";
-import NoteInput from "./noteInput";
+import NoteInput from "./NoteInput";
 
 class NoteForm extends Form {
   renderNoteInput(name, label, placeholder, errors, data) {

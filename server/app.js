@@ -6,11 +6,11 @@ const express = require('express');
 const app = express();
 
 
-// StartUp
+// Configuration
 require('dotenv').config();
 require('express-async-errors');
-require("./startup/routes")(app, express);
-require("./startup/db")(chalk);
+require("./configuration/routes")(app, express);
+require("./configuration/db")(chalk);
 
 
 // Port

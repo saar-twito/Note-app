@@ -1,8 +1,8 @@
 // * Imports
 import React from "react";
-import Form from "../Common/form";
+import Form from "../../Common/form";
 import Joi from "joi-browser";
-import user from "../../service/user";
+import user from "../../../service/user";
 
 // * Icons
 import { IconContext } from "react-icons";
@@ -12,7 +12,7 @@ import { FaKey } from "react-icons/fa";
 
 // * Style
 import "react-toastify/dist/ReactToastify.css";
-import classes from "../../Style/index.module.css";
+import "../style.css";
 
 class SignIn extends Form {
   state = {
@@ -28,7 +28,7 @@ class SignIn extends Form {
   doSubmit = async () => {
     try {
       const userCredentials = { ...this.state.data };
-      await user.signIn(userCredentials);
+      await user.login(userCredentials);
       window.location = "/todo";
     } catch (ex) {
       this.handleError(ex);
@@ -38,8 +38,8 @@ class SignIn extends Form {
   render() {
     return (
       <IconContext.Provider value={{ size: "25px" }}>
-        <form className={classes.Form} onSubmit={this.handleSubmit}>
-          <h2>Sign in</h2>
+        <form className="form" onSubmit={this.handleSubmit}>
+          <h2>Login</h2>
           {this.renderInput(
             <AiOutlineMail />,
             "email",
@@ -57,7 +57,7 @@ class SignIn extends Form {
           )}
           {this.renderButton(
             <VscAccount style={{ marginRight: "10px" }} />,
-            "Sign In"
+            "Login"
           )}
         </form>
       </IconContext.Provider>

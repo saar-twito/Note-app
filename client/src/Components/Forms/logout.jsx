@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 
 import user from "../../service/user";
 
-class logout extends Component {
+class logout extends React.Component {
   componentDidMount() {
     user.logout();
-    window.location = "/signIn";
+    window.location = "/login";
   }
 
   render() {

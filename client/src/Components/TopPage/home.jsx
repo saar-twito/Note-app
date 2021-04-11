@@ -2,13 +2,13 @@
 import React from "react";
 
 // * Style
-import classes from "./home.module.css";
+import "./style.css";
 
-const home = () => {
+const Home = () => {
   return (
-    <div className={classes.Top}>
-      <div className={classes.Image}></div>
-      <h1 className={classes.Header}>
+    <div className="top">
+      <div className="image"></div>
+      <h1 className="header">
         Welcome,
         <br /> To the Note App
       </h1>
@@ -16,4 +16,4 @@ const home = () => {
   );
 };
 
-export default home;
+export default Home;

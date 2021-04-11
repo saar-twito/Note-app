@@ -1,13 +1,13 @@
 import React from "react";
-import Form from "../Common/form";
+import Form from "../../Common/form";
 import Joi from "joi-browser";
 import { IconContext } from "react-icons";
 import { AiFillCheckCircle } from "react-icons/ai";
 import { BsFillPersonFill } from "react-icons/bs";
-import classes from "../../Style/index.module.css";
-import user from "../../service/user";
+import "../style.css";
+import user from "../../../service/user";
 
-class SignUp extends Form {
+class Register extends Form {
   state = {
     data: { name: "", email: "", password: "" },
     errors: {},
@@ -33,8 +33,8 @@ class SignUp extends Form {
   render() {
     return (
       <IconContext.Provider value={{ size: "25px" }}>
-        <form className={classes.Form} onSubmit={this.handleSubmit}>
-          <h2>Sign Up</h2>
+        <form className="form" onSubmit={this.handleSubmit}>
+          <h2>Register</h2>
           {this.renderInput(
             <BsFillPersonFill />,
             "name",
@@ -66,4 +66,4 @@ class SignUp extends Form {
   }
 }
 
-export default SignUp;
+export default Register;

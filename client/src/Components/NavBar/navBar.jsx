@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const navBar = ({ user }) => (
+const NavBar = ({ user }) => (
   <nav className="navbar navbar-expand-lg navbar-light bg-light">
     <NavLink
       className="nav-link disabled"
@@ -56,13 +56,13 @@ const navBar = ({ user }) => (
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/signIn">
-                Sign In
+              <NavLink className="nav-link" to="/login">
+                Login
               </NavLink>
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/register">
-                Sign Up
+               Register
               </NavLink>
             </li>
           </React.Fragment>
@@ -72,4 +72,4 @@ const navBar = ({ user }) => (
   </nav>
 );
 
-export default navBar;
+export default NavBar;

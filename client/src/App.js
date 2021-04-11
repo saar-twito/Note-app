@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import NavBar from './Components/NavBar/navBar'
-import Home from './Components/TopPage/home'
-import SignUp from './Components/Forms/signUp'
-import SignIn from './Components/Forms/signIn'
+import NavBar from './Components/NavBar/NavBar'
+import Home from './Components/TopPage/Home'
+import Register from './Components/Forms/Auth/register'
+import Login from './Components/Forms/Auth/login'
 import Logout from './Components/Forms/logout'
-import NotFound from './Components/Common/notFound'
+import NotFound from './Components/Common/NotFound'
 import NoteMain from './Components/Note/noteMain';
 import User from './service/user'
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
@@ -34,8 +34,8 @@ class App extends Component {
               return <NoteMain {...props} />
             }}
           />
-          <Route path="/register" exact component={SignUp} />
-          <Route path="/signIn" exact component={SignIn} />
+          <Route path="/register" exact component={Register} />
+          <Route path="/login" exact component={Login} />
           <Route path="/logout" exact component={Logout} />
           <Route path="/not-fount" component={NotFound} />
 
